@@ -1,6 +1,6 @@
 //Colors
 
-$Tomato: hsl(4, 100%, 67%);
+$Tomato: #ff6257;
 $DarkSlateGrey: hsl(234, 29%, 20%);
 $CharcoalGrey: hsl(235, 18%, 26%);
 $Grey: hsl(231, 7%, 60%);
@@ -14,10 +14,16 @@ $White: hsl(0, 0%, 100%);
 }
 
 body {
-  background: $DarkSlateGrey;
+  background: $CharcoalGrey;
 }
 
+.-hidden {
+  display: none;
+}
 
+.-active {
+  display: block;
+}
 
 .newsletter {
   max-width: 1440px;
@@ -26,7 +32,6 @@ body {
   min-block-size: 100vh;
   justify-content: center;
   align-items: center;
- 
 
   &__wrapper {
     display: flex;
@@ -34,7 +39,7 @@ body {
     padding: 1.5rem;
     background: $White;
     width: clamp(300px, 70%, 996px);
-    border-radius: 25px;
+    border-radius: 30px;
   }
 
   &__formCol {
@@ -54,28 +59,92 @@ body {
     line-height: 30px;
   }
 
-
   &__desc {
     ul {
       list-style-position: inside;
       list-style-type: none;
-      
+      margin-bottom: 3rem;
+
       li {
         position: relative;
-        margin-top: .75rem;
-        margin-bottom: .75rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
 
         &::before {
-          content: url('/assets/images/icon-list.svg');
-          margin-right: 10px;
+          content: url("/assets/images/icon-list.svg");
+          margin-right: 1rem;
           vertical-align: middle;
         }
-        
       }
     }
   }
 
-  &__desc, &__subtitle, &__title {
+  &__label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    
+
+    input {
+      padding: 1rem;
+      margin-top: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+
+      &.-errState {
+        border: 1px solid $Tomato;
+        color: $Tomato;
+        background-color: #ffe8e6;
+      }
+
+      &:focus-visible {
+        outline-color: $Tomato;
+        outline-width: 2px;
+      }
+
+      &::placeholder {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__formErr {
+    position: absolute;
+    content: 'Valid email required';
+    top: 0;
+    right: 0;
+    color: $Tomato;
+    font-size: .75rem;
+  }
+
+  &__desc,
+  &__subtitle,
+  &__title {
     margin-bottom: 1.5rem;
+  }
+
+  &__submit {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    background: $DarkSlateGrey;
+    color: $White;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+
+    &:hover,
+    &:focus-within {
+      background: linear-gradient(90deg, #ff537b, transparent) #fe6a3d;
+      transition: background-color 0.3s;
+    }
   }
 }

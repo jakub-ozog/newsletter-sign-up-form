@@ -16,7 +16,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet" />
-
     <title>Newsletter sign-up form with success message</title>
   </head>
 
@@ -24,12 +23,15 @@
     <main class="newsletter">
       <section class="newsletter__wrapper">
         <div class="newsletter__formCol">
-          <form action="POST">
+          <form action="">
             <div class="newsletter__title">
               <h1>Stay updated!</h1>
             </div>
             <div class="newsletter__subtitle">
-              <p>Join 60,000+ product managers receiving monthly  <br> updates on:</p>
+              <p>
+                Join 60,000+ product managers receiving monthly <br />
+                updates on:
+              </p>
             </div>
             <div class="newsletter__desc">
               <ul>
@@ -38,15 +40,33 @@
                 <li>And much more!</li>
               </ul>
             </div>
+            
+              <label for="email" class="newsletter__label">
+                Email address
+                <input
+                class="-errState"
+                  type="email"
+                  name="email"
+                  placeholder="email@company.com" />
+                  <p class="newsletter__formErr -hidden">
+                    Valid email required
+                  </p>
+              </label>
+
              
-            <label for="email">
-              Email address
-              <input type="email" name="email" placeholder="email@company.com">
-            </label>
+
+            <button
+              class="newsletter__submit"
+              type="submit"
+              aria-label="Submit form">
+              Subscribe to monthly newsletter
+            </button>
           </form>
         </div>
         <div class="newsletter__imgCol">
-          <img src="/assets/images/illustration-sign-up-desktop.svg" alt="newsletter-form-img">
+          <img
+            src="/assets/images/illustration-sign-up-desktop.svg"
+            alt="newsletter-form-img" />
         </div>
       </section>
     </main>

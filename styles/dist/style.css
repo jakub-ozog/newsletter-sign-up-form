@@ -6,7 +6,15 @@
 }
 
 body {
-  background: #242742;
+  background: #36384e;
+}
+
+.-hidden {
+  display: none;
+}
+
+.-active {
+  display: block;
 }
 
 .newsletter {
@@ -23,7 +31,7 @@ body {
   padding: 1.5rem;
   background: white;
   width: clamp(300px, 70%, 996px);
-  border-radius: 25px;
+  border-radius: 30px;
 }
 .newsletter__formCol {
   margin-left: 3rem;
@@ -40,6 +48,7 @@ body {
 .newsletter__desc ul {
   list-style-position: inside;
   list-style-type: none;
+  margin-bottom: 3rem;
 }
 .newsletter__desc ul li {
   position: relative;
@@ -48,9 +57,61 @@ body {
 }
 .newsletter__desc ul li::before {
   content: url("/assets/images/icon-list.svg");
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: middle;
+}
+.newsletter__label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.newsletter__label input {
+  padding: 1rem;
+  margin-top: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.newsletter__label input.-errState {
+  border: 1px solid #ff6257;
+  color: #ff6257;
+  background-color: #ffe8e6;
+}
+.newsletter__label input:focus-visible {
+  outline-color: #ff6257;
+  outline-width: 2px;
+}
+.newsletter__label input::placeholder {
+  font-size: 1rem;
+}
+.newsletter__formErr {
+  position: absolute;
+  content: "Valid email required";
+  top: 0;
+  right: 0;
+  color: #ff6257;
+  font-size: 0.75rem;
 }
 .newsletter__desc, .newsletter__subtitle, .newsletter__title {
   margin-bottom: 1.5rem;
+}
+.newsletter__submit {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  background: #242742;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+.newsletter__submit:hover, .newsletter__submit:focus-within {
+  background: linear-gradient(90deg, #ff537b, transparent) #fe6a3d;
+  transition: background-color 0.3s;
 }
