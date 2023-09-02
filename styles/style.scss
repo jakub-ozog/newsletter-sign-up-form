@@ -1,0 +1,81 @@
+//Colors
+
+$Tomato: hsl(4, 100%, 67%);
+$DarkSlateGrey: hsl(234, 29%, 20%);
+$CharcoalGrey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: $DarkSlateGrey;
+}
+
+
+
+.newsletter {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  min-block-size: 100vh;
+  justify-content: center;
+  align-items: center;
+ 
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: $White;
+    width: clamp(300px, 70%, 996px);
+    border-radius: 25px;
+  }
+
+  &__formCol {
+    margin-left: 3rem;
+    margin-top: 4rem;
+    color: $CharcoalGrey;
+  }
+
+  &__title {
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+  }
+
+  &__subtitle {
+    line-height: 30px;
+  }
+
+
+  &__desc {
+    ul {
+      list-style-position: inside;
+      list-style-type: none;
+      
+      li {
+        position: relative;
+        margin-top: .75rem;
+        margin-bottom: .75rem;
+
+        &::before {
+          content: url('/assets/images/icon-list.svg');
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+        
+      }
+    }
+  }
+
+  &__desc, &__subtitle, &__title {
+    margin-bottom: 1.5rem;
+  }
+}
