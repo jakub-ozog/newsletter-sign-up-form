@@ -1,8 +1,9 @@
 //Colors
 
-$Tomato: #ff6257;
+$Tomato: hsl(4, 100%, 67%);
 $DarkSlateGrey: hsl(234, 29%, 20%);
 $CharcoalGrey: hsl(235, 18%, 26%);
+$SoftViolet: hsl(235, 31%, 63%);
 $Grey: hsl(231, 7%, 60%);
 $White: hsl(0, 0%, 100%);
 
@@ -86,8 +87,6 @@ body {
     font-size: 0.75rem;
     font-weight: 700;
 
-    
-
     input {
       padding: 1rem;
       margin-top: 0.75rem;
@@ -95,15 +94,21 @@ body {
       border-radius: 8px;
       font-size: 1rem;
 
+      &:focus-visible {
+        outline-color: $SoftViolet;
+        outline-width: 1px;
+      }
+
       &.-errState {
         border: 1px solid $Tomato;
         color: $Tomato;
         background-color: #ffe8e6;
-      }
+        position: relative;
 
-      &:focus-visible {
-        outline-color: $Tomato;
-        outline-width: 2px;
+        &:focus-visible {
+          outline-color: $Tomato;
+          outline-width: 2px;
+        }
       }
 
       &::placeholder {
@@ -114,11 +119,10 @@ body {
 
   &__formErr {
     position: absolute;
-    content: 'Valid email required';
     top: 0;
     right: 0;
     color: $Tomato;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 
   &__desc,

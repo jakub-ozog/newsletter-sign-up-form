@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -17,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet" />
     <title>Newsletter sign-up form with success message</title>
+    <script defer src="app/script.js"></script>
   </head>
 
   <body>
@@ -40,20 +40,16 @@
                 <li>And much more!</li>
               </ul>
             </div>
-            
-              <label for="email" class="newsletter__label">
-                Email address
-                <input
-                class="-errState"
-                  type="email"
-                  name="email"
-                  placeholder="email@company.com" />
-                  <p class="newsletter__formErr -hidden">
-                    Valid email required
-                  </p>
-              </label>
 
-             
+            <label for="email" class="newsletter__label">
+              Email address
+              <input
+                class="newsletter__input"
+                type="email"
+                name="email"
+                placeholder="email@company.com" />
+              <p class="newsletter__formErr -hidden">Valid email required</p>
+            </label>
 
             <button
               class="newsletter__submit"

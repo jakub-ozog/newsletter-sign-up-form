@@ -74,12 +74,17 @@ body {
   border-radius: 8px;
   font-size: 1rem;
 }
+.newsletter__label input:focus-visible {
+  outline-color: #8388be;
+  outline-width: 1px;
+}
 .newsletter__label input.-errState {
   border: 1px solid #ff6257;
   color: #ff6257;
   background-color: #ffe8e6;
+  position: relative;
 }
-.newsletter__label input:focus-visible {
+.newsletter__label input.-errState:focus-visible {
   outline-color: #ff6257;
   outline-width: 2px;
 }
@@ -88,7 +93,6 @@ body {
 }
 .newsletter__formErr {
   position: absolute;
-  content: "Valid email required";
   top: 0;
   right: 0;
   color: #ff6257;
