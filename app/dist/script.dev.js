@@ -7,8 +7,8 @@ var sectionMain = document.querySelector('.newsletter__wrapper');
 var sectionTy = document.querySelector('.newsletter__tyScreen');
 var dismissBtn = document.querySelector('.-dismissBtn');
 sectionTy.classList.add('-hidden');
-submitBtn.addEventListener('click', function (e) {
-  e.preventDefault();
+submitBtn.addEventListener('click', function () {
+  // e.preventDefault();
   var inputContent = inputField.value;
 
   if (inputContent.includes('@')) {

@@ -5,11 +5,10 @@ const sectionMain = document.querySelector('.newsletter__wrapper');
 const sectionTy = document.querySelector('.newsletter__tyScreen');
 const dismissBtn = document.querySelector('.-dismissBtn');
 
-
 sectionTy.classList.add('-hidden')
 
-submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+submitBtn.addEventListener('click', () => {
+    // e.preventDefault();
     const inputContent = inputField.value
 
     if (inputContent.includes('@')) {
