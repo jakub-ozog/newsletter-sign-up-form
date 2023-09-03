@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Newsletter Sign Up Form - Frontend Mentor">
   <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
   <link rel="stylesheet" href="styles/dist/style.css" />
@@ -50,12 +51,8 @@
         <img class="imgMob" src="/assets/images/illustration-sign-up-mobile.svg" alt="newsletter-form-img" />
       </div>
     </section>
-
     <section class="newsletter__tyScreen">
-
       <div class="newsletter__tyContentWrapper">
-
-    
       <div class="newsletter__tyIcon">
         <img class="" src="assets/images/icon-success.svg" alt="">
       </div>
@@ -63,9 +60,8 @@
       <div class="newsletter__title">
         <h1 class="-lHeightSm">Thanks for <br> subscribing!</h1>
       </div>
-
       <div class="newsletter__tyDesc">
-        <p>A confirmation email has been sent to <b>as@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription.</p>
+        <p>A confirmation email has been sent to <span class="newsletter__email"></span>. Please open it and click the button inside to confirm your subscription.</p>
       </div>
         </div>
       <button class="newsletter__submit -dismissBtn" type="button" aria-label="dismiss message">

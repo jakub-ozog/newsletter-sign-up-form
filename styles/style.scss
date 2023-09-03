@@ -20,14 +20,11 @@ body {
 
   @media (max-width: 476px) {
     font-size: 0.875rem;
+    background: $White;
   }
 
   @media (max-width: 375px) {
     font-size: 0.75rem;
-  }
-
-  @media (max-width: 476px) {
-    background: $White;
   }
 }
 
@@ -53,9 +50,6 @@ body {
 
     @media (max-width: 940px) {
       width: clamp(300px, 95%, 600px);
-    }
-
-    @media (max-width: 940px) {
       flex-direction: column-reverse;
     }
 
@@ -72,28 +66,37 @@ body {
     color: $CharcoalGrey;
 
     @media (max-width: 940px) {
-      margin: 0 auto;
-      margin-top: 2rem;
+      margin: 1rem auto;
     }
   }
 
   &__imgCol {
-    .imgDesktop {
-      @media (max-width: 940px) {
+    @media (max-width: 940px) {
+      .imgDesktop {
         display: none;
       }
-    }
-    .imgMob {
-      @media (max-width: 940px) {
+
+      .imgMob {
         display: block;
         margin: 0 auto;
         max-width: 500px;
         width: 100%;
       }
+    }
+
+    .imgMob {
       @media (min-width: 940px) {
         display: none;
       }
+
+      @media (min-width: 476px) {
+        border-radius: 25px;
+      }
     }
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
   }
 
   &__title {
@@ -102,35 +105,55 @@ body {
       font-size: 3.25rem;
       font-weight: 700;
       line-height: 60px;
+      margin-bottom: 1rem;
 
       @media (max-width: 476px) {
         font-size: 2.75rem;
       }
 
-      &.-lHeightSm {
-        line-height: 50px;
+      @media (max-width: 375px) {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        line-height: 40px;
       }
 
-      @media (max-width: 375px) {
-        font-size: 2.25rem;
-      }
+      
     }
   }
 
   &__subtitle {
     line-height: 30px;
+
+    @media (max-width: 375px) {
+      line-height: 20px;
+    }
   }
 
   &__desc {
+    margin-bottom: 1rem;
+
     ul {
       list-style-position: inside;
       list-style-type: none;
       margin-bottom: 3rem;
 
+      @media (max-width: 375px) {
+        margin-bottom: 0;
+      }
+      @media (min-width: 400px) {
+        margin-bottom: 1rem;
+      }
+
       li {
         position: relative;
         margin-top: 0.75rem;
         margin-bottom: 0.75rem;
+
+        @media (max-width: 375px) {
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+        }
 
         &::before {
           content: url("/assets/images/icon-list.svg");
@@ -184,12 +207,6 @@ body {
     right: 0;
     color: $Tomato;
     font-size: 0.75rem;
-  }
-
-  &__desc,
-  &__subtitle,
-  &__title {
-    margin-bottom: 1.5rem;
   }
 
   &__submit {
@@ -252,6 +269,10 @@ body {
     @media (max-width: 476px) {
       margin-top: 7rem;
     }
+  }
+
+  &__email {
+    font-weight: 700;
   }
 }
 

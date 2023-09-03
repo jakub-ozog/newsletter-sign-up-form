@@ -12,16 +12,12 @@ body {
 @media (max-width: 476px) {
   body {
     font-size: 0.875rem;
+    background: white;
   }
 }
 @media (max-width: 375px) {
   body {
     font-size: 0.75rem;
-  }
-}
-@media (max-width: 476px) {
-  body {
-    background: white;
   }
 }
 
@@ -49,10 +45,6 @@ body {
 @media (max-width: 940px) {
   .newsletter__wrapper {
     width: clamp(300px, 95%, 600px);
-  }
-}
-@media (max-width: 940px) {
-  .newsletter__wrapper {
     flex-direction: column-reverse;
   }
 }
@@ -70,16 +62,13 @@ body {
 }
 @media (max-width: 940px) {
   .newsletter__formCol {
-    margin: 0 auto;
-    margin-top: 2rem;
+    margin: 1rem auto;
   }
 }
 @media (max-width: 940px) {
   .newsletter__imgCol .imgDesktop {
     display: none;
   }
-}
-@media (max-width: 940px) {
   .newsletter__imgCol .imgMob {
     display: block;
     margin: 0 auto;
@@ -92,37 +81,70 @@ body {
     display: none;
   }
 }
+@media (min-width: 476px) {
+  .newsletter__imgCol .imgMob {
+    border-radius: 25px;
+  }
+}
+.newsletter__subtitle {
+  margin-bottom: 1.5rem;
+}
 .newsletter__title h1 {
   color: #242742;
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 60px;
+  margin-bottom: 1rem;
 }
 @media (max-width: 476px) {
   .newsletter__title h1 {
     font-size: 2.75rem;
   }
 }
-.newsletter__title h1.-lHeightSm {
-  line-height: 50px;
-}
 @media (max-width: 375px) {
   .newsletter__title h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    line-height: 40px;
   }
 }
 .newsletter__subtitle {
   line-height: 30px;
+}
+@media (max-width: 375px) {
+  .newsletter__subtitle {
+    line-height: 20px;
+  }
+}
+.newsletter__desc {
+  margin-bottom: 1rem;
 }
 .newsletter__desc ul {
   list-style-position: inside;
   list-style-type: none;
   margin-bottom: 3rem;
 }
+@media (max-width: 375px) {
+  .newsletter__desc ul {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 400px) {
+  .newsletter__desc ul {
+    margin-bottom: 1rem;
+  }
+}
 .newsletter__desc ul li {
   position: relative;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+@media (max-width: 375px) {
+  .newsletter__desc ul li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
 }
 .newsletter__desc ul li::before {
   content: url("/assets/images/icon-list.svg");
@@ -166,9 +188,6 @@ body {
   right: 0;
   color: #ff6257;
   font-size: 0.75rem;
-}
-.newsletter__desc, .newsletter__subtitle, .newsletter__title {
-  margin-bottom: 1.5rem;
 }
 .newsletter__submit {
   padding: 1rem 1.5rem;
@@ -225,6 +244,9 @@ body {
   .newsletter__tyContentWrapper {
     margin-top: 7rem;
   }
+}
+.newsletter__email {
+  font-weight: 700;
 }
 
 .-hidden {

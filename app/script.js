@@ -5,21 +5,26 @@ const sectionMain = document.querySelector('.newsletter__wrapper');
 const sectionTy = document.querySelector('.newsletter__tyScreen');
 const dismissBtn = document.querySelector('.-dismissBtn');
 
+const emailToSent = document.querySelector('.newsletter__email');
+
 sectionTy.classList.add('-hidden')
 
-submitBtn.addEventListener('click', () => {
-    // e.preventDefault();
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     const inputContent = inputField.value
 
-    if (inputContent.includes('@')) {
+    if (inputContent.includes('@') && inputContent.length > 3) {
         formErr.classList.add('-hidden')
         inputField.classList.remove('-errState')
         sectionMain.classList.add('-hidden')
         sectionTy.classList.remove('-hidden')
+        emailToSent.textContent = inputContent;
     } else {
         inputField.classList.add('-errState')
         formErr.classList.remove('-hidden')
     }
+
+    
 })
 
 dismissBtn.addEventListener('click', () => {
