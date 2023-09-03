@@ -18,13 +18,7 @@ body {
   background: $CharcoalGrey;
 }
 
-.-hidden {
-  display: none;
-}
 
-.-active {
-  display: block;
-}
 
 .newsletter {
   max-width: 1440px;
@@ -51,8 +45,10 @@ body {
 
   &__title {
     h1 {
-      font-size: 4rem;
+      color: $DarkSlateGrey;
+      font-size: 3.25rem;
       font-weight: 700;
+      line-height: 60px;
     }
   }
 
@@ -151,4 +147,41 @@ body {
       transition: background-color 0.3s;
     }
   }
+
+
+
+
+  &__tyScreen {
+    padding: 3.5rem;
+    background: white;
+    width: clamp(300px, 85%, 476px);
+    border-radius: 30px;
+    color: $DarkSlateGrey;
+  }
+
+  &__tyIcon {
+   margin-bottom: 2rem; 
+
+   img {
+    width: 60px;
+   }
+  }
+
+
+  &__tyDesc {
+    font-size: .875rem;
+    line-height: 21px;
+    margin-bottom: 1.5rem;
+
+  }
+
+}
+
+
+.-hidden {
+  display: none;
+}
+
+.-active {
+  display: block;
 }

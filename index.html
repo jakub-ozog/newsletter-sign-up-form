@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png" />
-    <link rel="stylesheet" href="styles/dist/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet" />
-    <title>Newsletter sign-up form with success message</title>
-    <script defer src="app/script.js"></script>
-  </head>
 
-  <body>
-    <main class="newsletter">
-      <section class="newsletter__wrapper">
-        <div class="newsletter__formCol">
-          <form action="">
-            <div class="newsletter__title">
-              <h1>Stay updated!</h1>
-            </div>
-            <div class="newsletter__subtitle">
-              <p>
-                Join 60,000+ product managers receiving monthly <br />
-                updates on:
-              </p>
-            </div>
-            <div class="newsletter__desc">
-              <ul>
-                <li>Product discovery and building what matters</li>
-                <li>Measuring to ensure updates are a success</li>
-                <li>And much more!</li>
-              </ul>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="styles/dist/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Newsletter sign-up form with success message</title>
+  <script defer src="app/script.js"></script>
+</head>
 
-            <label for="email" class="newsletter__label">
-              Email address
-              <input
-                class="newsletter__input"
-                type="email"
-                name="email"
-                placeholder="email@company.com" />
-              <p class="newsletter__formErr -hidden">Valid email required</p>
-            </label>
+<body>
+  <main class="newsletter">
+    <section class="newsletter__wrapper">
+      <div class="newsletter__formCol">
+        <form action="">
+          <div class="newsletter__title">
+            <h1>Stay updated!</h1>
+          </div>
+          <div class="newsletter__subtitle">
+            <p>
+              Join 60,000+ product managers receiving monthly <br />
+              updates on:
+            </p>
+          </div>
+          <div class="newsletter__desc">
+            <ul>
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+          <label for="emailField" class="newsletter__label">
+            Email address
+            <input class="newsletter__input" type="email" name="email" placeholder="email@company.com" required autocomplete="email@company.com" id="emailField"/>
+            <p class="newsletter__formErr -hidden">Valid email required</p>
+          </label>
+          <button class="newsletter__submit" type="submit" aria-label="Submit form">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <div class="newsletter__imgCol">
+        <img src="/assets/images/illustration-sign-up-desktop.svg" alt="newsletter-form-img" />
+      </div>
+    </section>
 
-            <button
-              class="newsletter__submit"
-              type="submit"
-              aria-label="Submit form">
-              Subscribe to monthly newsletter
-            </button>
-          </form>
-        </div>
-        <div class="newsletter__imgCol">
-          <img
-            src="/assets/images/illustration-sign-up-desktop.svg"
-            alt="newsletter-form-img" />
-        </div>
-      </section>
-    </main>
-  </body>
+    <section class="newsletter__tyScreen">
+      <div class="newsletter__tyIcon">
+        <img class="" src="assets/images/icon-success.svg" alt="">
+      </div>
+      <div class="newsletter__title">
+        <h1 class="">Thanks for <br> subscribing!</h1>
+      </div>
+
+      <div class="newsletter__tyDesc">
+        <p>A confirmation email has been sent to <b>as@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription.</p>
+      </div>
+
+      <button class="newsletter__submit -dismissBtn" type="button" aria-label="dismiss message">
+       Dismiss message
+      </button>
+    </section>
+  </main>
+</body>
+
 </html>

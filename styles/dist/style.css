@@ -9,14 +9,6 @@ body {
   background: #36384e;
 }
 
-.-hidden {
-  display: none;
-}
-
-.-active {
-  display: block;
-}
-
 .newsletter {
   max-width: 1440px;
   margin: 0 auto;
@@ -39,8 +31,10 @@ body {
   color: #36384e;
 }
 .newsletter__title h1 {
-  font-size: 4rem;
+  color: #242742;
+  font-size: 3.25rem;
   font-weight: 700;
+  line-height: 60px;
 }
 .newsletter__subtitle {
   line-height: 30px;
@@ -118,4 +112,30 @@ body {
 .newsletter__submit:hover, .newsletter__submit:focus-within {
   background: linear-gradient(90deg, #ff537b, transparent) #fe6a3d;
   transition: background-color 0.3s;
+}
+.newsletter__tyScreen {
+  padding: 3.5rem;
+  background: white;
+  width: clamp(300px, 85%, 476px);
+  border-radius: 30px;
+  color: #242742;
+}
+.newsletter__tyIcon {
+  margin-bottom: 2rem;
+}
+.newsletter__tyIcon img {
+  width: 60px;
+}
+.newsletter__tyDesc {
+  font-size: 0.875rem;
+  line-height: 21px;
+  margin-bottom: 1.5rem;
+}
+
+.-hidden {
+  display: none;
+}
+
+.-active {
+  display: block;
 }
